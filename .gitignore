@@ -5,3 +5,5 @@ client-side/node_modules
 # for backend
 server-side/node_modules
 server-side/.env
+
+server-side/.env
