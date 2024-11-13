@@ -1,0 +1,17 @@
+{
+  "name": "advancedauth",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon server-side/index.js",
+    "start":"node server-side/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
