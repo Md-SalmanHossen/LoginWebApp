@@ -1,8 +1,9 @@
 
+import { errorHandler } from '../utils/error.js';
 import User from '../models/userModel.js'
 import bcryptjs from 'bcryptjs'
 
-export const signup=async (req,res)=>{
+export const signup=async (req,res,next)=>{
    try {
 
       const {userName,email,password}=req.body;
@@ -17,8 +18,9 @@ export const signup=async (req,res)=>{
       if (error.code === 11000) {
          res.status(409).json({ message: "User already exists" });
       }else{
-         res.status(404).json({message:error.message})
-      } 
+         next(errorHandler(300,"something went wrong"));
+      }
+      //next(errorHandler(300,"something went wrong")); 
 
    }
 }
